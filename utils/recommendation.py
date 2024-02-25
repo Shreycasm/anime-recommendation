@@ -6,9 +6,8 @@ import gzip
 from utils.top import load_anime_data, clean_df
 
 def similarity_matrix():
-    #with open('./artifacts/similarity.pkl', 'rb') as f:
-       # return pickle.load(f)
-    filename = 'artifacts\similarity_.pkl'   
+  
+    filename = './artifacts/similarity_.pkl'   
     with open(filename, 'rb') as gzipped_file:
         return pickle.load(gzipped_file)
 
