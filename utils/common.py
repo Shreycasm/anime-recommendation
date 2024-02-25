@@ -10,11 +10,8 @@ import gzip
 
 
 def load_anime_data():
-    
     with open('./artifacts/anime_df.pkl', 'rb') as f:
         return pickle.load(f)
-
-    
 
     
 
@@ -24,3 +21,13 @@ def clean_df(df):
     df['genre'] = df['genre_x'].apply(lambda x: ast.literal_eval(x) if pd.notnull(x) else [])
 
     return df
+
+
+def similarity_matrix():  
+    with open('./artifacts/similarity_.pkl', 'rb') as f:
+        return pickle.load(f)
+    
+
+def  item_similarity():   
+    with open('./artifacts/item_similarity.pkl', 'rb') as f:
+        return pickle.load(f)
